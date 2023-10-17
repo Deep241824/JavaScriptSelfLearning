@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country List</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #002d62;
+      }
+
+      #countryList {
+        list-style: none;
+        padding: 0;
+      }
+
+      .country-container {
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .country-name {
+        font-weight: bold;
+      }
+
+      .population {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="countryList"></ul>
+    <script>
+      fetch("https://restcountries.com/v3.1/all")
+        .then((response) => response.json())
+        .then((data) => {
+          const countryListElement = document.getElementById("countryList");
+
+          data.forEach((country) => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+                        <div class="country-container">
+                            <span class="country-name">${country.name.common}</span>
+                            <span class="population">Population: ${country.population}</span>
+                        </div>
+                    `;
+            countryListElement.appendChild(listItem);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    </script>
+  </body>
+</html>

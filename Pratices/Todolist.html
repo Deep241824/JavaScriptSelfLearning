@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+
+      .delete {
+        color: red;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      // Function to add a new task
+      function addTask() {
+        const taskInput = document.getElementById("taskInput");
+        const taskText = taskInput.value.trim();
+
+        if (taskText === "") {
+          alert("Please enter a task.");
+          return;
+        }
+
+        const taskList = document.getElementById("taskList");
+        const li = document.createElement("li");
+        li.innerHTML =
+          taskText +
+          '<span class="delete" onclick="deleteTask(this)">Delete</span> <span class="edit" onclick="editTask(this)">Edit</span>';
+        taskList.appendChild(li);
+        taskInput.value = "";
+      }
+
+      // Function to delete a task
+      function deleteTask(element) {
+        const taskList = document.getElementById("taskList");
+        taskList.removeChild(element.parentElement);
+      }
+
+      // Function to edit a task
+      function editTask(element) {
+        const taskText = prompt(
+          "Edit task:",
+          element.parentElement.textContent
+        );
+        if (taskText !== null) {
+          element.parentElement.textContent =
+            taskText.trim() +
+            ' <span class="delete" onclick="deleteTask(this)">Delete</span> <span class="edit" onclick="editTask(this)">Edit</span>';
+        }
+      }
+    </script>
+  </body>
+</html>
