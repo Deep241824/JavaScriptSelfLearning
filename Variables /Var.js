@@ -16,3 +16,4 @@ for (let i = 0; i < n; i++) {
 }
 // printing the string
 console.log(string);
+var =Hello Pradeep;
