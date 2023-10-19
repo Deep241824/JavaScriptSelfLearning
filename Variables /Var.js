@@ -1,4 +1,22 @@
-console.log("Namastey duniya!");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log("Namastey duniya!");
 console.log("hello Angel!");
 let n = 5; // row or column count

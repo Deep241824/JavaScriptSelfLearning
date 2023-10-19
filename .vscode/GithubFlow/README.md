@@ -13,7 +13,7 @@ Initialize a Git Repository (if not using an existing one): If you're not using 
 
 csharp
 Copy code
-git init
+1111~~~~~git init
 Add Files to the Staging Area: Use the following command to stage the files you want to commit (replace <file(s)> with the names of the files you want to stage):
 
 scss
@@ -21,26 +21,22 @@ Copy code
 git add <file(s)>
 To stage all changes, you can use:
 
-csharp
-Copy code
-git add .
+222~~~~git add .
 Commit the Changes: Commit your staged changes with a meaningful commit message using the following command:
 
 sql
 Copy code
-git commit -m "Your commit message here"
+33333git commit -m "Your commit message here"
 Link to the GitHub Repository (if not using an existing one): If you initialized a new Git repository (step 3) and created a GitHub repository (step 1), you need to connect your local repository to the GitHub repository using:
 
-csharp
-Copy code
-git remote add origin <repository_url>
+444441git remote add origin <repository_url>
 This sets the remote repository named "origin" to your GitHub repository.
 
 Push Changes to GitHub: Push your committed changes to GitHub using the following command:
 
 perl
 Copy code
-git push -u origin master
+5555 git push -u origin master
 This pushes the changes in your local master branch to the GitHub repository.
 
 After following these steps, your changes will be reflected in your GitHub repository. You can continue making changes, committing, and pushing as needed. Remember to replace <repository_url> with the actual URL of your GitHub repository and customize your commit messages to describe the changes you're making.
