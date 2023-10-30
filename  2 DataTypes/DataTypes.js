@@ -15,8 +15,8 @@ let state;
 // bigint--> trading website use karty hain
 // string => ""
 // boolean => true/false
-// null => standalone value
-// undefined =>
+// null => standalone value : empty temprature 0 thn null aya i
+// undefined => value not assign
 // symbol => unique
 
 // object

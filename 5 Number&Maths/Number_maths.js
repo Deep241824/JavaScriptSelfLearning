@@ -14,6 +14,7 @@ const otherNumber = 123.8966;
 
 const hundreds = 1000000;
 // console.log(hundreds.toLocaleString('en-IN'));
+//yeah en-IN') indian curency m change kiya gya hian
 
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 

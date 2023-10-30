@@ -33,4 +33,4 @@ const myFunction = function () {
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
-// data types of nonprimative function he bola jata hain fuction ka dta type function he hota
+// data types of nonprimative function he bola jata hain fuction ka dta type object function he hota

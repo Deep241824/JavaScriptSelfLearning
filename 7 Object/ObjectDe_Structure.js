@@ -10,7 +10,7 @@ const { courseInstructor: instructor } = course;
 
 // console.log(courseInstructor);
 // console.log(instructor);
-
+// API-->JSon Formater
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
@@ -20,3 +20,4 @@ const { courseInstructor: instructor } = course;
 // [{}, {}, {}];
 
 //   Apna kaam kisi or k sar par daldena called API- exapmle like pasta kahana i dont know wo kaise bana bass khan hain
+// Menu also apni doumention api ka
